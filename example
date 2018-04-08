@@ -20,16 +20,16 @@ if ($pharPath) {
 }
 
 // Define our Runner, and pass it the command classes we provide.
-$commandClasses = [ \ExampleProject\Cli\ExampleCommands::class ];
+$commandClasses = [ \StarterTest62\Cli\ExampleCommands::class ];
 $runner = new \Robo\Runner($commandClasses);
 
 // Add the self-update command to our runner
-$selfUpdateRepository = 'g-1-a/starter';
+$selfUpdateRepository = 'greg-1-anderson/starter-test-62';
 $runner->setSelfUpdateRepository($selfUpdateRepository);
 
 // Prepare the variables we need to run the command
 $argv = $_SERVER['argv'];
-$appName = "ExampleProject";
+$appName = "StarterTest62";
 $appVersion = file_get_contents(__DIR__ . '/VERSION');
 $output = new \Symfony\Component\Console\Output\ConsoleOutput();
 
